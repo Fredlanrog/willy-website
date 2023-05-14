@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Startup</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The line above allows the page to be mobile responsive first, allowing zooming, expanding, etc-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Your own stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="style.css"-->
+
+    <!--What follows below is my insertion of Nadia's round photo-->
+
+     <div class="circular-landscape"> 
+        <img src="images/couple.jpg">
+
+     </div>
+     <!-- End of insertion -->
+
+  </head>
+  <body>
+
+    <style>
+body,
+html {
+  
+/*The block below with eight lines has been copied from CSS Tricks to insert a full image
+ as a background. The "header.jpg" in the url is the name of the image being inserted which will
+ need to be changed for other webpages, of course. Also the image will always center horizontally
+ and vertically regardless of the size of the device*/
+
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background: url(images/willy.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  /*End of block*/
+}
+
+h1 {
+
+  /*<hr> is used to add a horizontal line in a webpage. This line can be used to 
+  divide information or segments of your webpage. By themselves are rather boring,
+  that is why we can use some CSS techniques to add a bit of style*/
+
+  font-size: 4rem;
+  
+  /* to decide a color, as in below, go to inspect and find the existing color and use the palette
+  to select the best color by inserting the hexa code in the inspect line*/
+
+  color: rgb(129, 119, 235);
+  
+  
+}
+
+
+
+hr {
+  /*This is to add style to the line. Also to make it shorter and thicker*/
+
+   margin: 20px auto;
+    color: rgb(129, 119, 235);
+    border: 3px solid #F05F44;
+    max-width: 100px;
+    opacity: 1;  
+}
+
+.buffer {
+  height: 0rem;
+}
+
+.btn {
+
+  /*This is to make the font larger and the corners round and make all the letters uppercase 
+  (a different way of doing it in CSS, instead of:  " <h1 class="text-uppercase">)*/
+
+  font-weight: 700;
+  border-radius: 300px; 
+  text-transform: uppercase;
+ 
+ 
+}
+
+.btn-primary {
+
+  /*Thi is to change the background color of the button to red when the cursor hovers over it. The 
+  second line is to overwrite the line around the edges showing the original color blue.*/
+
+  background-color: rgb(129, 119, 235);
+  border-color: #F05F44;
+  
+}
+
+.btn-primary:hover {
+  /*This is to make the button larger when the cursor hovers over it and also increase the borders width*/
+  background-color: #ee4b08;
+  border-color: #ee4b08;
+  border-width: 4px;
+}
+
+.btn-xl {
+  /*This is to make the button larger*/
+  padding: 1rem 2rem;
+
+}
+
+/*This is to make the photo circular*/
+.circular-landscape { display: inline-block;
+ position: absolute; width: 150px; height: 150px;
+ overflow: hidden; border-radius: 50%; 
+ 
+}
+
+ .circular-landscape img { width: 100%; 
+  height: 100%; margin-left:10; 
+
+}
+
+  
+  /*The lines below are to separate the circular image, which has been set as absolute, from
+  the margin*/
+
+.circular-landscape {
+margin-left: 10px;
+margin-top:10px;
+
+}
+  
+.text-uppercase {
+  
+    text-shadow: -1px 0 black, 0 3px black, 3px 0 black, 0 -1px black; 
+    margin-top: 450px;
+}
+
+
+
+    </style>
+<!-- by adding d-flec to the container, we activate flexbox. Then by looking at bootstrap we find that
+align-items-center is the property to align the elements. The because body is not covering the whole page
+we need to insert h-100, ie. height 100 to cover the full page vertically. Then the button moves down.-->
+      
+      <!-- The "h-100" height 100, below is the bootstrap way to cover the full height of the page, in this case to center the "find out more" button-->
+    <div class="container d-flex align-items-center h-100">
+      <div class="row">
+        <header class="text-center col-sm-12">
+
+          <!-- Note below that "text-uppercase" has been added to make h1 all uppercase, without resorting to CSS-->
+
+          <h1 class="text-uppercase" style="font-size: 9vw;">Bienvenidos a nuestra Página Web</h1>>
+
+          <!-- What follows below is my insertion of Nadia's round photo-->
+
+         
+        </header>
+        <div class="buffer col-12"></div>
+        <section class="text-center col-12">
+          <hr>
+
+          <!-- The button type was selected from Bootstrap in this link: "https://getbootstrap.com/docs/4.3/components/buttons/". The primary blue
+            one has been selected. btn-xl (button extra large) has been added below which 
+            makes no difference to the button. It has been created to target it in CSS as
+            .btn-xl-->
+
+            <!-- In the href below I must insert the page I want the button to link to -->
+          <a href="secondpage.html"> <button class="btn btn-primary btn-xl">Entrar</button>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
